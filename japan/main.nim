@@ -13,7 +13,8 @@ type
   RGB = tuple[r, g, b: float]
 
 # https://www.flagcolorcodes.com/japan
-func japan(u, v: float): RGB =
+# border is optional; I added it because of the white color of the flag
+func japan(u, v: float, border: bool = false): RGB =
   let
     cx = 0.5
     cy = 0.5
@@ -21,9 +22,10 @@ func japan(u, v: float): RGB =
     dy = cy - v
     r = CIRCLE_RADIUS / HEIGHT
   #
-  if (u == 0.0 or v == 0.0 or u >= 0.998 or v >= 0.997):  # thin black border
-    (0.0, 0.0, 0.0)
-  elif (dx * RATIO) ^ 2 + dy ^ 2 <= r ^ 2:
+  if border:
+    return (0.0, 0.0, 0.0)
+  # else:
+  if (dx * RATIO) ^ 2 + dy ^ 2 <= r ^ 2:
     (188 / 255, 0.0, 45 / 255)
   else:
     (1.0, 1.0, 1.0)
@@ -41,7 +43,8 @@ proc main() =
       let
         u = x / WIDTH
         v = y / HEIGHT
-        (r, g, b) = japan(u, v)
+        border: bool = ((y == 0) or (y == HEIGHT-1) or (x == 0) or (x == WIDTH-1))
+        (r, g, b) = japan(u, v, border)
 
       f.write(chr(int(r * 255)))
       f.write(chr(int(g * 255)))

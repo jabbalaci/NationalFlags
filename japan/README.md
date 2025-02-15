@@ -1,6 +1,10 @@
 # Japan
 
-<img src="output.png" width="50%">
+<table border="1" bgcolor="lightgray">
+<tr>
+<td><img src="output.png" width="50%"></td>
+</tr>
+</table>
 
 ## Links, etc.
 

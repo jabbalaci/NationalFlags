@@ -1,10 +1,10 @@
 # National Flags
 
-National flags created with shaders.
+National flags created with *shaders*.
 
 I saw a [video](https://www.youtube.com/watch?v=IGTuv_KKLFs) from [Tsoding](https://www.youtube.com/@TsodingDaily), and it gave me the idea to create my country's flag with a shader.
 
-## Hungary's Flag
+## Flag of Hungary
 
 Here is an example:
 

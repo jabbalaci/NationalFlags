@@ -1,6 +1,13 @@
 import strformat
 import math
 
+#[
+  How to customize it to produce a different flag?
+  1) set width and height
+  2) edit the `hungary()` function and rename it
+     this is the shader
+]#
+
 # flag of Hungary:
 # horizontally striped red-white-green national flag
 # Its width-to-length ratio is 2 to 3.
@@ -40,7 +47,7 @@ proc main() =
       f.write(chr(int(g * 255)))
       f.write(chr(int(b * 255)))
 
-  echo "END"
+  echo "done"
 
 # ############################################################################
 

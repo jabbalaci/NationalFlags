@@ -8,7 +8,7 @@ I saw a [video](https://www.youtube.com/watch?v=IGTuv_KKLFs) from [Tsoding](http
 
 Here is an example:
 
-![example](hungary/output.png)
+<img src="hungary/output.png" width="50%">
 
 The code that generates it is here:
 [hungary/main.nim](hungary/main.nim).

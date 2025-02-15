@@ -1,0 +1,9 @@
+nimcache/
+nimblecache/
+htmldocs/
+
+
+# own settings
+
+main
+output.ppm

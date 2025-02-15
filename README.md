@@ -11,7 +11,7 @@ Here is an example:
 <img src="hungary/output.png" width="50%">
 
 The code that generates it is here:
-[hungary/main.nim](hungary/main.nim).
+[hungary/main.nim](hungary/main.nim)
 
 ## Contribution
 

@@ -21,7 +21,9 @@ func japan(u, v: float): RGB =
     dy = cy - v
     r = CIRCLE_RADIUS / HEIGHT
   #
-  if (dx * RATIO) ^ 2 + dy ^ 2 <= r ^ 2:
+  if (u == 0.0 or v == 0.0 or u >= 0.998 or v >= 0.997):  # thin black border
+    (0.0, 0.0, 0.0)
+  elif (dx * RATIO) ^ 2 + dy ^ 2 <= r ^ 2:
     (188 / 255, 0.0, 45 / 255)
   else:
     (1.0, 1.0, 1.0)

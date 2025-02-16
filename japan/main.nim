@@ -1,6 +1,10 @@
 import strformat
 import math
 
+#[
+  Written by: Laszlo Szathmary <jabba.laci@gmail.com>
+]#
+
 # https://en.wikipedia.org/wiki/Flag_of_Japan#/media/File:Construction_sheet_of_the_Japanese_flag_EN.svg
 const
   unit = 250
@@ -25,7 +29,7 @@ func japan(u, v: float, border: bool = false): RGB =
   if border:
     return (0.0, 0.0, 0.0)
   # else:
-  if (dx * RATIO) ^ 2 + dy ^ 2 <= r ^ 2:
+  if (dx * RATIO) ^ 2 + dy ^ 2 <= r ^ 2:  # trick: prevent it to become an ellipse
     (188 / 255, 0.0, 45 / 255)
   else:
     (1.0, 1.0, 1.0)

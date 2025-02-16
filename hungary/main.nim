@@ -6,6 +6,8 @@ import math
   1) set width and height
   2) edit the `hungary()` function and rename it
      this is the shader
+  Optional: add your name in a comment, like this:
+  Written by: Laszlo Szathmary <jabba.laci@gmail.com>
 ]#
 
 # flag of Hungary:

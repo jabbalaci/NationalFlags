@@ -22,7 +22,10 @@ type
   RGB = tuple[r, g, b: float]
 
 # https://www.flagcolorcodes.com/hungary
-func hungary(u, v: float): RGB =
+func hungary(u, v: float, border: bool = false): RGB =
+  if border:
+    return (0.0, 0.0, 0.0)
+  # else:
   if v < 1/3:
     (206 / 255, 41 / 255, 57 / 255)
   elif v > 2/3:
@@ -43,7 +46,8 @@ proc main() =
       let
         u = x / WIDTH
         v = y / HEIGHT
-        (r, g, b) = hungary(u, v)
+        border: bool = ((y == 0) or (y == HEIGHT-1) or (x == 0) or (x == WIDTH-1))
+        (r, g, b) = hungary(u, v, border)
 
       f.write(chr(int(r * 255)))
       f.write(chr(int(g * 255)))
